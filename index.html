@@ -94,7 +94,7 @@
 <body>
 
 <header>
-    <h1>the mds grocery pro store</h1>
+    <h1>the mds grocery </h1>
 </header>
 
 <div class="analytics-box" id="adminAnalyticsBox">
@@ -117,7 +117,6 @@
         <option value="Pcs">প্রতি পিস (Pcs)</option>
         <option value="Packet">প্রতি প্যাকেট (Packet)</option>
     </select>
-
     <select id="pCategory">
         <option value="চাল">চাল</option>
         <option value="ডাল">ডাল</option>
@@ -380,7 +379,7 @@
         var newOrder = {
             id: orderId, name: cName, phone: cPhone,
             address: cCity + ", " + cRoad + ", " + cHouse,
-            items: itemNames, bill: totalAmount.toFixed(2), lat: latitude, lon: longitude, status: "Pending"
+            items: cart,bill: totalAmount.toFixed(2), lat: latitude, lon: longitude, status: "Pending"
         };
 
         var currentOrders = JSON.parse(localStorage.getItem('groceryOrders')) || [];
